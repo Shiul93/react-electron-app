@@ -5,7 +5,7 @@ const isDev = require('electron-is-dev');
 const path = require('path');
 let mainWindow;
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680});
+  mainWindow = new BrowserWindow({width: 900, height: 680, resizable: false, frame: false,titleBarStyle: 'hiddenInset'});
   mainWindow.loadURL(isDev ? 'http://localhost:3000' :
   'file://${path.join(__dirname,\'../build/index.html\')}'); 
   app.setAboutPanelOptions({
